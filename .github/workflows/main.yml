@@ -40,7 +40,7 @@ jobs:
       - name: Terraform Validate
         id: validate
         run: terraform validate -no-color
-        working-directory: environments/dev        
+        working-directory: env/dev        
       
       - name: Terraform Plan
         id: plan
