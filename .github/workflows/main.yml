@@ -54,15 +54,15 @@ jobs:
     needs: terraform-init-plan
     environment: dev
     steps:
-      # - name: Checkout
-      #   uses: actions/checkout@v5.0.0
+      - name: Checkout
+        uses: actions/checkout@v5.0.0
     
-      # - name: Azure Login
-      #   uses: Azure/login@v2.3.0
-      #   with:
-      #     client-id: f9573d1d-1333-4d75-8e88-d298a34242a1
-      #     tenant-id: 96e40700-6303-4437-a677-c0d7f1f5eb24
-      #     subscription-id: dfad8f6a-4ed1-4448-b795-d396ad2c60db
+      - name: Azure Login
+        uses: Azure/login@v2.3.0
+        with:
+          client-id: f9573d1d-1333-4d75-8e88-d298a34242a1
+          tenant-id: 96e40700-6303-4437-a677-c0d7f1f5eb24
+          subscription-id: dfad8f6a-4ed1-4448-b795-d396ad2c60db
           
       - name: Terraform Init
         id: init
